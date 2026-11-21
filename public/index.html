@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get ready for Cyber Essentials | cybersecurity247</title>
+<meta name="description" content="Tell us about your business and we will help you prepare for Cyber Essentials certification.">
+<style>
+:root{--ink:#10243a;--muted:#5a6b7d;--paper:#f3f6f9;--card:#fff;--line:#c9d3de;--accent:#0a6cff;--accent-d:#0856cc;--ok:#13795b;--err:#b42318;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--ink:#e8eef5;--muted:#9fb0c2;--paper:#0d1a28;--card:#14263a;--line:#2c425a;--accent:#4d97ff;--accent-d:#74adff;--ok:#4cc9a0;--err:#ff8a7a;color-scheme:dark}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;background:var(--paper);color:var(--ink);line-height:1.5;min-height:100vh;display:flex;flex-direction:column}
+header{padding:20px 20px 0;max-width:640px;margin:0 auto;width:100%}
+.brand{font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+.brand b{color:var(--accent)}
+main{flex:1;width:100%;max-width:640px;margin:0 auto;padding:28px 20px 40px}
+h1{font-size:clamp(1.7rem,5vw,2.3rem);line-height:1.15;letter-spacing:-.025em;margin:0 0 8px;font-weight:800}
+.lead{color:var(--muted);margin:0 0 24px;max-width:52ch}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-bottom:6px}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+.meta{font-size:.85rem;color:var(--muted);margin-bottom:22px}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend,.q{font-size:1.3rem;font-weight:700;letter-spacing:-.01em;margin:0 0 16px;padding:0;line-height:1.3}
+.opt{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px;cursor:pointer}
+.opt:hover{border-color:var(--accent)}
+.opt:has(input:checked){border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.opt:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px}
+.opt input{margin-top:3px;accent-color:var(--accent);width:18px;height:18px;flex:none}
+.opt strong{display:block}.opt small{color:var(--muted);display:block}
+label.f{display:block;font-weight:600;font-size:.9rem;margin:0 0 6px}
+input[type=text],input[type=email],input[type=tel],input[type=number]{width:100%;font:inherit;font-size:1rem;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);margin-bottom:16px}
+input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus,input[type=number]:focus{outline:3px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.hp{position:absolute;left:-9999px}
+.err{color:var(--err);font-weight:600;font-size:.92rem;min-height:1.4em;margin:2px 0 8px}
+.row{display:flex;gap:10px;margin-top:10px}
+button{font:inherit;font-weight:700;border:0;border-radius:10px;cursor:pointer;padding:14px 20px}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.next{flex:1;background:var(--accent);color:#fff}.next:hover{background:var(--accent-d)}.next:disabled{opacity:.6;cursor:wait}
+.back{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.consent{display:flex;gap:10px;font-size:.85rem;color:var(--muted);margin:4px 0 14px;align-items:flex-start}
+.consent input{margin-top:3px;accent-color:var(--accent);width:18px;height:18px;flex:none}
+.consent a,footer a{color:inherit}
+.done h2{font-size:1.6rem;margin:0 0 8px}.ref{font-weight:800;color:var(--ok)}
+.done ol{padding-left:20px;color:var(--muted)}.done li{margin-bottom:8px}
+.trust{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted);font-size:.88rem;margin-top:26px}
+footer{max-width:640px;margin:0 auto;width:100%;padding:0 20px 28px;font-size:.78rem;color:var(--muted)}
+.result{border-radius:10px;padding:14px 16px;margin:16px 0;border:1.5px solid var(--line);background:var(--card)}.result.ok{border-color:var(--ok)}.result p{margin:6px 0 0}.result a{color:var(--accent)}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="brand">cybersecurity<b>247</b></div></header>
+<main>
+  <div id="intro"><h1>Get your business ready for Cyber Essentials</h1>
+  <p class="lead">Answer a few quick questions and one of our team will contact you to talk through what your business needs.</p></div>
+  <div id="wrap">
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="fill"></i></div>
+    <div class="meta" id="meta" aria-live="polite"></div>
+    <form id="form" novalidate autocomplete="on">
+      <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div id="step"></div>
+      <div class="err" id="err" role="alert"></div>
+      <div class="row"><button type="button" class="back" id="back" aria-label="Previous question">Back</button><button type="submit" class="next" id="next">Continue</button></div>
+    </form>
+  </div>
+  <div id="done" class="done" hidden tabindex="-1">
+    <h2>Thanks, we have your request</h2>
+    <p>Your reference number is <span class="ref" id="ref"></span>.</p>
+    <div id="result"></div>
+    <p><strong>What happens next</strong></p>
+    <ol><li>We review your answers.</li><li>One of our team contacts you, usually within one working day, to discuss what you need.</li><li>You decide whether to go ahead. There is no obligation.</li></ol>
+  </div>
+  <div class="trust" id="trust"><span>No obligation</span><span>Takes about a minute</span><span>We never sell your data</span></div>
+</main>
+<footer>cybersecurity247 helps UK businesses prepare for Cyber Essentials certification. We are not the certification body and are not affiliated with the NCSC or IASME. We do not share your details with other companies. <a href="/privacy.html">Privacy policy</a> &middot; <a href="/terms.html">Terms of use</a> &middot; <a href="/cookies.html">Cookies</a></footer>
+<script>
+const FUND_END=new Date('2027-04-01T00:00:00'), yn=['Yes','No'];
+const steps=[
+  {k:'ukRegistered',type:'radio',q:'Is your company registered in the UK?',opts:yn},
+  {k:'employees',type:'radio',q:'How many employees are in your company?',opts:['Under 10','10 - 49','50 - 249','250 or more']},
+  {k:'firstTime',type:'radio',q:'Is this your first time applying for Cyber Essentials?',opts:yn},
+  {k:'priorCert',type:'radio',q:'Has your company held a Cyber Essentials certificate in the last 4 years?',opts:yn,when:d=>d.firstTime==='No'},
+  {k:'urgency',type:'radio',q:'How soon do you need this service?',opts:['ASAP','Within 3 months','Within 6 months','Over 6 months']},
+  {k:'contact',type:'text',q:'Almost done. Where should we send your result?',consent:true,fields:[
+    {k:'name',label:'Full name',ph:'e.g. Joe Bloggs',ac:'name',type:'text'},
+    {k:'company',label:'Company name',ph:'e.g. Company Ltd',ac:'organization',type:'text'},
+    {k:'email',label:'Work email',ph:'name@company.com',ac:'email',type:'email'},
+    {k:'phone',label:'Telephone number',ph:'e.g. 020 7946 0000',ac:'tel',type:'tel'}],
+    check:v=>v.name.length<2||v.company.length<2?'Enter your name and company name.':!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.email)?'Enter a valid email address.':v.phone.replace(/\D/g,'').length<10?'Enter a valid phone number.':true}
+];
+const data={}, $=id=>document.getElementById(id); let i=0;
+const vis=()=>steps.filter(s=>!s.when||s.when(data));
+const html=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// Government Cyber Essentials First Step Fund (announced 3 Nov 2026): 75% off for UK micro/small/medium businesses
+// that have not held Cyber Essentials in the last 4 years. First come, first served until 31 Mar 2027 or funds run out.
+function check(d){const r=[];
+  if(d.ukRegistered!=='Yes')r.push('the company is not registered in the UK');
+  if(d.employees==='250 or more')r.push('the fund is for businesses with fewer than 250 employees');
+  if(d.firstTime==='No'&&d.priorCert!=='No')r.push('the fund is for businesses that have not held Cyber Essentials in the last 4 years');
+  return r}
+function result(){
+  const r=check(data), link='<a href="https://firststep.iasme.co.uk/" target="_blank" rel="noopener">firststep.iasme.co.uk</a>';
+  if(r.length)return `<div class="result"><strong>You may not qualify for the 75% government discount</strong><p>Based on your answers: ${r.map(html).join('; ')}. We can still help you get certified, and our team will talk through your options.</p></div>`;
+  if(new Date()>=FUND_END)return `<div class="result"><strong>You would have met the discount conditions</strong><p>The government's 75% discount fund was due to close on 31 March 2027, so it may no longer be open. Check ${link}, and we will confirm when we call.</p></div>`;
+  return `<div class="result ok"><strong>You may qualify for the 75% government discount</strong><p>Your answers match the main conditions of the government's Cyber Essentials First Step Fund. Eligible businesses pay £80 to £125 plus VAT for certification.</p><p>We can help you prepare so you pass first time!</p></div>`}
+function render(){
+  const v=vis(), s=v[i]; let h='';
+  if(s.type==='radio'){
+    h=`<fieldset><legend>${s.q}</legend>`+s.opts.map(o=>{const [x,d]=Array.isArray(o)?o:[o];
+      return `<label class="opt"><input type="radio" name="${s.k}" value="${html(x)}" ${data[s.k]===x?'checked':''}><span><strong>${html(x)}</strong>${d?`<small>${html(d)}</small>`:''}</span></label>`}).join('')+'</fieldset>';
+  }else{
+    h=`<p class="q" id="q">${s.q}</p>`+s.fields.map(f=>`<label class="f" for="${f.k}">${f.label}</label><input id="${f.k}" name="${f.k}" type="${f.type}" placeholder="${f.ph}" autocomplete="${f.ac}" value="${html(data[f.k]||'')}">`).join('');
+    if(s.consent)h+=`<label class="consent"><input type="checkbox" id="consent" ${data.consent?'checked':''}><span>I agree that cybersecurity247 may contact me by phone, SMS and email about my request and our Cyber Essentials services. I can withdraw this at any time. See our <a href="/privacy.html">privacy policy</a>.</span></label>`;
+  }
+  $('step').innerHTML=h; $('err').textContent='';
+  $('back').hidden=i===0; $('next').textContent=i===v.length-1?'See my result':'Continue';
+  const p=Math.round(i/v.length*100); $('fill').style.width=p+'%';
+  document.querySelector('.bar').setAttribute('aria-valuenow',p);
+  $('meta').textContent=`Question ${i+1} of ${v.length}`;
+  $('intro').hidden=i>0;
+  const first=$('step').querySelector('input'); if(first&&s.type==='text')first.focus();
+}
+function collect(){
+  const s=vis()[i];
+  if(s.type==='radio'){const c=document.querySelector(`input[name="${s.k}"]:checked`);return c?(data[s.k]=c.value,true):'Choose one option to continue.'}
+  s.fields.forEach(f=>data[f.k]=$(f.k).value.trim());
+  const r=s.check(data); if(r!==true)return r;
+  if(s.consent){data.consent=$('consent').checked; if(!data.consent)return 'Please tick the box to agree to be contacted.'}
+  return true;
+}
+$('back').onclick=()=>{if(i>0){i--;render()}};
+$('form').onsubmit=async e=>{
+  e.preventDefault(); const r=collect(); if(r!==true){$('err').textContent=r;return}
+  if(i<vis().length-1){i++;render();return}
+  if(data.firstTime==='Yes')delete data.priorCert;
+  $('next').disabled=true; $('next').textContent='Sending...';
+  try{
+    const res=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({...data,website:document.querySelector('[name=website]').value})});
+    const j=await res.json(); if(!res.ok)throw new Error(j.error||'Error');
+    $('wrap').hidden=true; $('trust').hidden=true; $('done').hidden=false; $('ref').textContent=j.ref; $('result').innerHTML=result(); $('done').focus();
+  }catch(x){$('err').textContent='Could not send your request. Check your details and try again.';$('next').disabled=false;$('next').textContent='See my result'}
+};
+render();
+</script>
+</body>
+</html>

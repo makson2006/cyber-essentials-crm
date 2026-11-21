@@ -1,0 +1,17 @@
+[Unit]
+Description=cybersecurity247 lead form
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/opt/cybersecurity247
+ExecStart=/usr/bin/node server.js
+Restart=always
+RestartSec=3
+Environment=NODE_ENV=production
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/cybersecurity247/data
+
+[Install]
+WantedBy=multi-user.target
