@@ -67,7 +67,6 @@ footer{max-width:640px;margin:0 auto;width:100%;padding:0 20px 28px;font-size:.7
   </div>
   <div id="done" class="done" hidden tabindex="-1">
     <h2>Thanks, we have your request</h2>
-    <p>Your reference number is <span class="ref" id="ref"></span>.</p>
     <div id="result"></div>
     <p><strong>What happens next</strong></p>
     <ol><li>We review your answers.</li><li>One of our team contacts you, usually within one working day, to discuss what you need.</li><li>You decide whether to go ahead. There is no obligation.</li></ol>
@@ -140,7 +139,7 @@ $('form').onsubmit=async e=>{
     const res=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({...data,website:document.querySelector('[name=website]').value})});
     const j=await res.json(); if(!res.ok)throw new Error(j.error||'Error');
-    $('wrap').hidden=true; $('trust').hidden=true; $('done').hidden=false; $('ref').textContent=j.ref; $('result').innerHTML=result(); $('done').focus();
+    $('wrap').hidden=true; $('trust').hidden=true; $('done').hidden=false; $('result').innerHTML=result(); $('done').focus();
   }catch(x){$('err').textContent='Could not send your request. Check your details and try again.';$('next').disabled=false;$('next').textContent='See my result'}
 };
 render();
